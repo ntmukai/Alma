@@ -19,7 +19,7 @@ class Player {
     let gs: GameScene
     
     // テクスチャ
-    var textures: [String: [SKTexture]]
+    let textures: [String: [SKTexture]]
 
     // スプライト
     let sprite: SKSpriteNode
@@ -39,16 +39,6 @@ class Player {
     // キャラの場所
     var location: CGPoint
     
-    
-    
-    
-
-//    let atlas = SKTextureAtlas(named: "Man")
-
-    // キャラサイズ
-//    let width = 32
-//    let height = 32
-    
     // ==================================================
     // イニシャライザ (指定座標にキャラクターを描画)
     // ==================================================
@@ -62,7 +52,7 @@ class Player {
         let cutW = CGFloat(gs.tile_w) / tileImg.size().width
         let cutH = CGFloat(gs.tile_h) / tileImg.size().height
 
-        textures = [String: [SKTexture]]()
+        var motions = [String: [SKTexture]]()
 
         // モーション毎にテクスチャを切り抜いてまとめる
         for y in 0 ..< tileImgRowNames.count {
@@ -78,8 +68,10 @@ class Player {
                 motion.append(texture)
             }
             
-            textures[motionNames[y]] = motion
+            motions[motionNames[y]] = motion
         }
+        
+        textures = motions
 
         // デフォルトの向きで初期テクスチャを取得
         let texture = textures[tileImgRowNames[direction]]![0]
