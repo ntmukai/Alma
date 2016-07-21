@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7674A6B1C8697A800644484 /* NonScrollMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7674A6A1C8697A800644484 /* NonScrollMap.swift */; };
+		F7C504811CB403D40000A075 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BEF3561C7EF62100EA25FA /* Player.swift */; };
+		F7FD9EBC1BF8CF0500F50B1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD9EBB1BF8CF0500F50B1A /* AppDelegate.swift */; };
+		F7FD9EBE1BF8CF0500F50B1A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD9EBD1BF8CF0500F50B1A /* GameScene.swift */; };
+		F7FD9EC01BF8CF0500F50B1A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F7FD9EBF1BF8CF0500F50B1A /* GameScene.sks */; };
+		F7FD9EC21BF8CF0500F50B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7FD9EC11BF8CF0500F50B1A /* Assets.xcassets */; };
+		F7FD9EC51BF8CF0500F50B1A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7FD9EC31BF8CF0500F50B1A /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F7674A6A1C8697A800644484 /* NonScrollMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonScrollMap.swift; sourceTree = "<group>"; };
+		F7BEF3561C7EF62100EA25FA /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F7FD9EB81BF8CF0500F50B1A /* Alma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7FD9EBB1BF8CF0500F50B1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7FD9EBD1BF8CF0500F50B1A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F7FD9EBF1BF8CF0500F50B1A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F7FD9EC11BF8CF0500F50B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7FD9EC41BF8CF0500F50B1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F7FD9EC61BF8CF0500F50B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7FD9EB51BF8CF0500F50B1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7FD9EAF1BF8CF0500F50B1A = {
+			isa = PBXGroup;
+			children = (
+				F7FD9EBA1BF8CF0500F50B1A /* Alma */,
+				F7FD9EB91BF8CF0500F50B1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7FD9EB91BF8CF0500F50B1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7FD9EB81BF8CF0500F50B1A /* Alma.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7FD9EBA1BF8CF0500F50B1A /* Alma */ = {
+			isa = PBXGroup;
+			children = (
+				F7FD9EBB1BF8CF0500F50B1A /* AppDelegate.swift */,
+				F7FD9EBD1BF8CF0500F50B1A /* GameScene.swift */,
+				F7FD9EBF1BF8CF0500F50B1A /* GameScene.sks */,
+				F7FD9EC11BF8CF0500F50B1A /* Assets.xcassets */,
+				F7FD9EC31BF8CF0500F50B1A /* MainMenu.xib */,
+				F7FD9EC61BF8CF0500F50B1A /* Info.plist */,
+				F7BEF3561C7EF62100EA25FA /* Player.swift */,
+				F7674A6A1C8697A800644484 /* NonScrollMap.swift */,
+			);
+			path = Alma;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7FD9EB71BF8CF0500F50B1A /* Alma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7FD9EC91BF8CF0500F50B1A /* Build configuration list for PBXNativeTarget "Alma" */;
+			buildPhases = (
+				F7FD9EB41BF8CF0500F50B1A /* Sources */,
+				F7FD9EB51BF8CF0500F50B1A /* Frameworks */,
+				F7FD9EB61BF8CF0500F50B1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alma;
+			productName = Alma;
+			productReference = F7FD9EB81BF8CF0500F50B1A /* Alma.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7FD9EB01BF8CF0500F50B1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = mukaiya;
+				TargetAttributes = {
+					F7FD9EB71BF8CF0500F50B1A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = F7FD9EB31BF8CF0500F50B1A /* Build configuration list for PBXProject "Alma" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7FD9EAF1BF8CF0500F50B1A;
+			productRefGroup = F7FD9EB91BF8CF0500F50B1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7FD9EB71BF8CF0500F50B1A /* Alma */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7FD9EB61BF8CF0500F50B1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7FD9EC21BF8CF0500F50B1A /* Assets.xcassets in Resources */,
+				F7FD9EC01BF8CF0500F50B1A /* GameScene.sks in Resources */,
+				F7FD9EC51BF8CF0500F50B1A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7FD9EB41BF8CF0500F50B1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C504811CB403D40000A075 /* Player.swift in Sources */,
+				F7FD9EBE1BF8CF0500F50B1A /* GameScene.swift in Sources */,
+				F7674A6B1C8697A800644484 /* NonScrollMap.swift in Sources */,
+				F7FD9EBC1BF8CF0500F50B1A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F7FD9EC31BF8CF0500F50B1A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7FD9EC41BF8CF0500F50B1A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7FD9EC71BF8CF0500F50B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7FD9EC81BF8CF0500F50B1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F7FD9ECA1BF8CF0500F50B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Alma/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				New_Setting = "";
+				PRODUCT_BUNDLE_IDENTIFIER = mukaiya.jp.Alma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7FD9ECB1BF8CF0500F50B1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Alma/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				New_Setting = "";
+				PRODUCT_BUNDLE_IDENTIFIER = mukaiya.jp.Alma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7FD9EB31BF8CF0500F50B1A /* Build configuration list for PBXProject "Alma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7FD9EC71BF8CF0500F50B1A /* Debug */,
+				F7FD9EC81BF8CF0500F50B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7FD9EC91BF8CF0500F50B1A /* Build configuration list for PBXNativeTarget "Alma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7FD9ECA1BF8CF0500F50B1A /* Debug */,
+				F7FD9ECB1BF8CF0500F50B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7FD9EB01BF8CF0500F50B1A /* Project object */;
+}
