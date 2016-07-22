@@ -42,7 +42,7 @@ class NonScrollMap {
     init(gameScene: GameScene) {
         gs = gameScene
         
-        // タイルの大きさを取得
+        // タイルのサイズを取得
         let tile_w = gs.tile_w
         let tile_h = gs.tile_h
 

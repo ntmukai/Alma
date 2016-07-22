@@ -18,20 +18,24 @@ class Player {
     // ゲームシーン
     let gs: GameScene
     
-    // テクスチャ
-    let textures: [String: [SKTexture]]
-
     // スプライト
     let sprite: SKSpriteNode
+    
+    // テクスチャ
+    let textures: [String: [SKTexture]]
+    
+    // テクスチャのサイズ
+    let texture_w: Int
+    let texture_h: Int
 
-    // タイル画像
-    let tileImg = SKTexture(imageNamed: "Player")
+    // テクスチャ画像
+    let textureImg = SKTexture(imageNamed: "Player")
     
-    // タイル画像の行の名前
-    let tileImgRowNames = ["up", "right", "down", "left"]
+    // テクスチャ画像の行の名前(モーション名)
+    let textureImgRowNames = ["up", "right", "down", "left"]
     
-    // タイル画像の列数
-    let tileImgColsNum = 3
+    // テクスチャ画像の列数
+    let textureImgColsNum = 3
     
     // キャラの向き(デフォルト:下)
     var direction = DIRECTION_D
@@ -46,25 +50,32 @@ class Player {
         gs = gameScene
         
         // モーション名を取得
-        let motionNames = Array(tileImgRowNames.reverse())
+        let motionNames = Array(textureImgRowNames.reverse())
+        
+        // テクスチャ画像の行数を取得
+        let textureImgRowsNum = textureImgRowNames.count
         
         // テクスチャのサイズを算出
-        let cutW = CGFloat(gs.tile_w) / tileImg.size().width
-        let cutH = CGFloat(gs.tile_h) / tileImg.size().height
+        texture_w = Int(textureImg.size().width) / textureImgColsNum
+        texture_h = Int(textureImg.size().height) / textureImgRowsNum
+
+        // テクスチャ画像からの切り抜きサイズを算出
+        let cutW = CGFloat(texture_w) / textureImg.size().width
+        let cutH = CGFloat(texture_h) / textureImg.size().height
 
         var motions = [String: [SKTexture]]()
 
         // モーション毎にテクスチャを切り抜いてまとめる
-        for y in 0 ..< tileImgRowNames.count {
+        for y in 0 ..< textureImgRowNames.count {
             var motion = [SKTexture]()
             
-            for x in 0 ..< tileImgColsNum {
+            for x in 0 ..< textureImgColsNum {
                 let x = CGFloat(x)
                 let y = CGFloat(y)
                 let point = CGPoint(x: x * cutW, y: y * cutH)
                 let size = CGSize(width: cutW, height: cutH)
                 let rect = CGRect(origin: point, size: size)
-                let texture = SKTexture(rect: rect, inTexture: tileImg)
+                let texture = SKTexture(rect: rect, inTexture: textureImg)
                 motion.append(texture)
             }
             
@@ -74,7 +85,7 @@ class Player {
         textures = motions
 
         // デフォルトの向きで初期テクスチャを取得
-        let texture = textures[tileImgRowNames[direction]]![0]
+        let texture = textures[textureImgRowNames[direction]]![0]
         
         // マップ座標を実座標に変換
         let y = Int(pop.y) * gs.tile_w + gs.tile_w / 2
@@ -115,9 +126,10 @@ class Player {
     
     // ==================================================
     // クリック方向へキャラを向ける
+    // <!>現在は変数に入れるだけ(キャラの見た目は変わらない)
     // ==================================================
     func chDirection(clickPoint: CGPoint) -> Int {
-        // 現在は変数に入れるだけ(キャラの見た目は変わらない)
+        // クリック座標から向きを算出
         direction = calcDirection(clickPoint)
         
         var action1 = SKAction.animateWithTextures(textures["down"]!, timePerFrame: 0.1)
