@@ -132,31 +132,24 @@ class Player {
         // クリック座標から向きを算出
         direction = calcDirection(clickPoint)
         
-        var action1 = SKAction.animateWithTextures(textures["down"]!, timePerFrame: 0.1)
-        var action2 = SKAction.setTexture(textures["down"]![0])
-        
+        // テクスチャを張り替えるだけ
         switch direction {
         case DIRECTION_U:
-            action1 = SKAction.animateWithTextures(textures["up"]!, timePerFrame: 0.1)
-            action2 = SKAction.setTexture(textures["up"]![0])
+            sprite.texture = textures["up"]![0]
             break
         case DIRECTION_R:
-            action1 = SKAction.animateWithTextures(textures["right"]!, timePerFrame: 0.1)
-            action2 = SKAction.setTexture(textures["right"]![0])
+            sprite.texture = textures["right"]![0]
             break
         case DIRECTION_D:
+            sprite.texture = textures["down"]![0]
             break
         case DIRECTION_L:
-            action1 = SKAction.animateWithTextures(textures["left"]!, timePerFrame: 0.1)
-            action2 = SKAction.setTexture(textures["left"]![0])
+            sprite.texture = textures["left"]![0]
             break
         default:
             break
         }
         
-        let action = SKAction.sequence([action1, action2])
-        sprite.runAction(action)
-
         return direction
     }
     
@@ -190,6 +183,32 @@ class Player {
     // 指定ポイントへ歩く
     // ==================================================
     func walk(point: CGPoint) {
+        
+        var action1 = SKAction.animateWithTextures(textures["down"]!, timePerFrame: 0.1)
+        var action2 = SKAction.setTexture(textures["down"]![0])
+        
+        switch direction {
+        case DIRECTION_U:
+            action1 = SKAction.animateWithTextures(textures["up"]!, timePerFrame: 0.1)
+            action2 = SKAction.setTexture(textures["up"]![0])
+            break
+        case DIRECTION_R:
+            action1 = SKAction.animateWithTextures(textures["right"]!, timePerFrame: 0.1)
+            action2 = SKAction.setTexture(textures["right"]![0])
+            break
+        case DIRECTION_D:
+            break
+        case DIRECTION_L:
+            action1 = SKAction.animateWithTextures(textures["left"]!, timePerFrame: 0.1)
+            action2 = SKAction.setTexture(textures["left"]![0])
+            break
+        default:
+            break
+        }
+
+        let action = SKAction.sequence([action1, action2])
+        sprite.runAction(action)
+
         // スプライトを移動
         let moveToX = Int(point.x) * 32 + 16
         let moveToY = Int(point.y) * 32 + 16
